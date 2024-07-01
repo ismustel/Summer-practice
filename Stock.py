@@ -527,8 +527,6 @@ class Stock:
         for i in range(quantity):
             for wholesale in self.pack_wholesale[:]:
                 if wholesale.type_product == type_product:
-                    for product in wholesale.get_pack():
-                        self.budget += product.cost
                     self.pack_wholesale.remove(wholesale)
                     break
 
